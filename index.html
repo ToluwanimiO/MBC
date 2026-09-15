@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Maranatha Baptist Church, Ogbomoso — Oasis of Grace. Raising and building people as God's envoys to the nations."
+  />
+
+  <title>Maranatha Baptist Church, Ogbomoso</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ==================================================
+       IMMERSIVE THREE.JS EXPERIENCE
+  ================================================== -->
+
+  <section
+    class="immersive-experience"
+    id="immersiveExperience"
+    aria-label="Maranatha Oasis of Grace experience"
+  >
+    <div id="oasisExperience"></div>
+
+    <div class="experience-vignette"></div>
+    <div class="experience-grain"></div>
+
+    <div class="experience-loader" id="experienceLoader">
+      <div class="experience-loader-content">
+        <img
+          src="IMG-20250905-WA0021.jpg"
+          alt="Maranatha Baptist Church logo"
+          onerror="this.style.display='none'"
+        />
+
+        <span class="loader-brand">MARANATHA</span>
+        <span class="loader-rule"></span>
+        <small>ENTER THE OASIS OF GRACE</small>
+        <p id="loaderStatus">Preparing your journey</p>
+
+        <button
+          class="loader-skip"
+          id="loaderSkip"
+          type="button"
+        >
+          Continue to website <span>→</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="experience-ui">
+      <a class="experience-brand" href="#immersiveExperience">
+        <img
+          src="IMG-20250905-WA0021.jpg"
+          alt="Maranatha Baptist Church logo"
+        />
+
+        <span>
+          <strong>Maranatha</strong>
+          <small>Baptist Church, Ogbomoso</small>
+        </span>
+      </a>
+
+      <button
+        class="experience-skip"
+        id="skipExperience"
+        type="button"
+      >
+        Skip experience <span>→</span>
+      </button>
+
+      <div class="experience-copy copy-desert active">
+        <span class="experience-overline">01 · THE BEGINNING</span>
+
+        <h1>
+          Every journey<br />
+          begins in a <em>desert.</em>
+        </h1>
+
+        <p>
+          There are seasons when life feels dry, distant, and uncertain.
+          But even here, God is already making a way.
+        </p>
+      </div>
+
+      <div class="experience-copy copy-water">
+        <span class="experience-overline">02 · THE ENCOUNTER</span>
+
+        <h1>
+          Then grace<br />
+          begins to <em>flow.</em>
+        </h1>
+
+        <p>
+          Draw near. Slow down. Discover the living water of Christ refreshing
+          weary hearts.
+        </p>
+      </div>
+
+      <div class="experience-copy copy-oasis">
+        <span class="experience-overline">03 · THE OASIS</span>
+
+        <h1>
+          Welcome to<br />
+          the <em>Oasis of Grace.</em>
+        </h1>
+
+        <p>
+          Maranatha Baptist Church is a place to belong, grow, serve, and
+          encounter the goodness of God.
+        </p>
+      </div>
+
+      <div class="experience-copy copy-sent">
+        <span class="experience-overline">04 · THE SENDING</span>
+
+        <h1>
+          Raised here.<br />
+          <em>Sent everywhere.</em>
+        </h1>
+
+        <p>
+          We are raising and building people as God’s envoys to the nations.
+        </p>
+      </div>
+
+      <div class="experience-progress">
+        <div class="progress-label">
+          <span id="experienceProgress">01</span>
+          <span>04</span>
+        </div>
+
+        <div class="progress-track">
+          <span id="experienceProgressBar"></span>
+        </div>
+
+        <div class="progress-caption">
+          <span>SCROLL TO EXPLORE</span>
+          <span class="progress-arrow">↓</span>
+        </div>
+      </div>
+
+      <div class="experience-side-label">
+        <span>OGBOMOSO</span>
+        <span class="side-line"></span>
+        <span>NIGERIA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================
+       MAIN CHURCH WEBSITE
+  ================================================== -->
+
+  <div class="website-shell" id="websiteShell">
+    <div class="announcement">
+      <div class="container announcement-inner">
+        <span class="announcement-icon">✦</span>
+
+        <p>
+          Welcome to Maranatha Baptist Church, Ogbomoso.
+        </p>
+
+        <a href="#visit">
+          Plan your first visit →
+        </a>
+
+        <button
+          class="announcement-close"
+          aria-label="Close announcement"
+          type="button"
+        >
+          ×
+        </button>
+      </div>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+      <div class="container nav-wrapper">
+        <a
+          class="brand"
+          href="#home"
+          aria-label="Maranatha Baptist Church home"
+        >
+          <img
+            src="IMG-20250905-WA0021.jpg"
+            alt="Maranatha Baptist Church logo"
+          />
+
+          <span class="brand-copy">
+            <strong>Maranatha</strong>
+            <small>Baptist Church, Ogbomoso</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#sermons">Sermons</a>
+          <a href="#ministries">Ministries</a>
+          <a href="#events">Events</a>
+          <a href="#visit">Plan a Visit</a>
+          <a href="#giving">Give</a>
+        </nav>
+
+        <a class="header-cta" href="#visit">
+          Join us Sunday <span>→</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Normal homepage hero -->
+      <section class="hero oasis-hero" id="home">
+        <div
+          id="oasisExperienceFallback"
+          aria-hidden="true"
+        ></div>
+
+        <div class="oasis-canvas-wash"></div>
+        <div class="hero-grain"></div>
+
+        <div class="oasis-interface">
+          <div class="oasis-topline">
+            <span class="oasis-location">
+              OGBOMOSO · OYO STATE · NIGERIA
+            </span>
+
+            <span class="oasis-status">
+              <span></span>
+              OASIS OF GRACE
+            </span>
+          </div>
+
+          <div class="container oasis-hero-layout">
+            <div class="oasis-hero-copy reveal">
+              <div class="oasis-kicker">
+                <span class="kicker-dot"></span>
+                <span>Oasis of Grace</span>
+              </div>
+
+              <p class="eyebrow eyebrow-light">
+                Maranatha Baptist Church
+              </p>
+
+              <h1>
+                Where grace<br />
+                <em>flows.</em>
+              </h1>
+
+              <p class="hero-description">
+                Raising and building people as God’s envoys to the nations.
+                Enter a church family where weary hearts are refreshed, lives
+                are strengthened, and purpose is awakened.
+              </p>
+
+              <div class="hero-actions">
+                <a class="button button-red" href="#visit">
+                  Plan your visit <span>→</span>
+                </a>
+
+                <a class="button button-outline" href="#salvation">
+                  Find new life <span>✦</span>
+                </a>
+              </div>
+
+              <div class="hero-service">
+                <span class="service-pulse"></span>
+
+                <div>
+                  <small>Gather with us this Sunday</small>
+                  <strong>7:30 AM · 9:30 AM · 11:30 AM</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="oasis-hero-side reveal">
+              <div class="oasis-floating-card card-desert">
+                <span>01</span>
+                <strong>Desert</strong>
+                <small>Every journey begins somewhere.</small>
+              </div>
+
+              <div class="oasis-floating-card card-water">
+                <span>02</span>
+                <strong>Living water</strong>
+                <small>Grace makes a way.</small>
+              </div>
+
+              <div class="oasis-floating-card card-life">
+                <span>03</span>
+                <strong>New life</strong>
+                <small>Christ restores and renews.</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="oasis-journey-nav">
+            <span class="journey-label active">DESERT</span>
+            <span class="journey-connector"></span>
+            <span class="journey-label">OASIS</span>
+            <span class="journey-connector"></span>
+            <span class="journey-label">LIFE</span>
+            <span class="journey-connector"></span>
+            <span class="journey-label">COMMUNITY</span>
+            <span class="journey-connector"></span>
+            <span class="journey-label">MISSION</span>
+          </div>
+
+          <div class="oasis-sound">
+            <span class="sound-dot"></span>
+            SOUND ON
+          </div>
+
+          <div class="oasis-scroll">
+            <div class="oasis-mouse"></div>
+            <span>SCROLL TO EXPLORE</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intro -->
+      <section class="experience-intro section">
+        <div class="container experience-intro-layout">
+          <div class="experience-intro-copy reveal">
+            <p class="eyebrow">A journey of grace</p>
+
+            <h2>
+              From dry places<br />
+              to <em>living water.</em>
+            </h2>
+
+            <p>
+              There are seasons when life feels like a desert. At Maranatha, we
+              believe God still brings streams into dry places. His grace
+              refreshes, His Word strengthens, and His people walk with us.
+            </p>
+          </div>
+
+          <div class="experience-stat-card reveal">
+            <span class="experience-stat-icon">⌁</span>
+            <span class="experience-stat-number">01</span>
+            <strong>Come thirsty.</strong>
+            <p>There is grace for today and hope for tomorrow.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Journey -->
+      <section class="journey-section section" id="about">
+        <div class="journey-glow"></div>
+
+        <div class="container">
+          <div class="section-heading journey-heading reveal">
+            <p class="eyebrow">The Maranatha journey</p>
+
+            <h2>
+              Grace is not only<br />
+              a place to rest.<br />
+              <em>It is a place to grow.</em>
+            </h2>
+
+            <p>
+              At Maranatha, people are welcomed by grace, raised through
+              discipleship, built through community, and sent with purpose.
+            </p>
+          </div>
+
+          <div class="journey-steps">
+            <article class="journey-step reveal">
+              <div class="step-orb orb-red">
+                <span>01</span>
+                <strong>Oasis</strong>
+              </div>
+
+              <div class="step-copy">
+                <span class="step-tag">Come and receive</span>
+                <h3>A place of refreshment</h3>
+                <p>
+                  In God’s presence, weary hearts find rest, hope, and a safe
+                  place to begin again.
+                </p>
+              </div>
+            </article>
+
+            <article class="journey-step reveal">
+              <div class="step-orb orb-blue">
+                <span>02</span>
+                <strong>Raised</strong>
+              </div>
+
+              <div class="step-copy">
+                <span class="step-tag">Grow in Christ</span>
+                <h3>A people becoming</h3>
+                <p>
+                  Through biblical teaching, prayer, worship, and discipleship,
+                  we grow into who God has called us to be.
+                </p>
+              </div>
+            </article>
+
+            <article class="journey-step reveal">
+              <div class="step-orb orb-gold">
+                <span>03</span>
+                <strong>Built</strong>
+              </div>
+
+              <div class="step-copy">
+                <span class="step-tag">Stand strong</span>
+                <h3>A faith with foundations</h3>
+                <p>
+                  We build lives, families, leaders, and communities on the
+                  truth of Scripture and the love of Christ.
+                </p>
+              </div>
+            </article>
+
+            <article class="journey-step reveal">
+              <div class="step-orb orb-navy">
+                <span>04</span>
+                <strong>Sent</strong>
+              </div>
+
+              <div class="step-copy">
+                <span class="step-tag">Go with purpose</span>
+                <h3>God’s envoys to the nations</h3>
+                <p>
+                  We carry the gospel beyond the church walls into Ogbomoso,
+                  Nigeria, Africa, and the nations.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Salvation -->
+      <section class="salvation-section section" id="salvation">
+        <div class="salvation-stars"></div>
+
+        <div class="container salvation-layout">
+          <div class="salvation-copy reveal">
+            <p class="eyebrow eyebrow-light">The greatest invitation</p>
+
+            <h2>
+              Grace is not<br />
+              earned.<br />
+              <em>It is received.</em>
+            </h2>
+
+            <p>
+              God loves you deeply. Through Jesus Christ, you can be forgiven,
+              restored, made new, and brought into the family of God.
+            </p>
+
+            <div class="salvation-scripture">
+              <span>“</span>
+
+              <p>
+                If anyone is in Christ, the new creation has come: the old has
+                gone, the new is here!
+              </p>
+
+              <small>2 Corinthians 5:17</small>
+            </div>
+          </div>
+
+          <div class="salvation-card reveal">
+            <div class="salvation-card-top">
+              <span class="salvation-cross">✚</span>
+              <span class="salvation-card-label">A simple response</span>
+            </div>
+
+            <div class="salvation-steps">
+              <article>
+                <span>01</span>
+                <div>
+                  <h3>Recognise</h3>
+                  <p>
+                    Acknowledge your need for God and your separation from Him.
+                  </p>
+                </div>
+              </article>
+
+              <article>
+                <span>02</span>
+                <div>
+                  <h3>Believe</h3>
+                  <p>
+                    Believe that Jesus died for your sins and rose again.
+                  </p>
+                </div>
+              </article>
+
+              <article>
+                <span>03</span>
+                <div>
+                  <h3>Receive</h3>
+                  <p>
+                    Receive God’s grace and trust Jesus as your Lord and
+                    Saviour.
+                  </p>
+                </div>
+              </article>
+
+              <article>
+                <span>04</span>
+                <div>
+                  <h3>Respond</h3>
+                  <p>
+                    Begin walking with Christ in faith, community, and
+                    obedience.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <button
+              class="button button-red salvation-button"
+              id="salvationButton"
+              type="button"
+            >
+              I want to follow Jesus <span>→</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Welcome -->
+      <section class="welcome section">
+        <div class="container welcome-grid">
+          <div class="welcome-copy reveal">
+            <p class="eyebrow">You are welcome here</p>
+
+            <h2>
+              A church family<br />
+              with <em>open arms.</em>
+            </h2>
+
+            <p>
+              Whether you are searching for a church, returning to faith, or
+              looking for a community to grow with, there is a place for you at
+              Maranatha.
+            </p>
+
+            <a class="text-link" href="#beliefs">
+              Discover what guides us <span>→</span>
+            </a>
+          </div>
+
+          <div class="welcome-cards reveal">
+            <article class="welcome-card card-red">
+              <span class="card-icon">✚</span>
+              <strong>Christ-centred</strong>
+              <p>Everything we do points back to Jesus.</p>
+            </article>
+
+            <article class="welcome-card card-blue">
+              <span class="card-icon">⌁</span>
+              <strong>Word-rooted</strong>
+              <p>We believe Scripture shapes everyday life.</p>
+            </article>
+
+            <article class="welcome-card card-image">
+              <img
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=85"
+                alt="Friends enjoying community together"
+              />
+
+              <div>
+                <strong>Life together</strong>
+                <p>Faith grows in community.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statement -->
+      <section class="statement-section">
+        <div class="statement-decoration statement-decoration-left">✦</div>
+        <div class="statement-decoration statement-decoration-right">✦</div>
+
+        <div class="container statement-content reveal">
+          <p class="eyebrow eyebrow-light">Our declaration</p>
+
+          <blockquote>“Maranatha — our Lord, come.”</blockquote>
+
+          <p>
+            We live with expectation, serve with joy, and invite every
+            generation to encounter the living Christ.
+          </p>
+
+          <span class="statement-reference">1 Corinthians 16:22</span>
+        </div>
+      </section>
+
+      <!-- Sermons -->
+      <section class="sermon-section section" id="sermons">
+        <div class="container">
+          <div class="section-heading split-heading reveal">
+            <div>
+              <p class="eyebrow">The latest message</p>
+
+              <h2>
+                Truth for the<br />
+                <em>journey.</em>
+              </h2>
+            </div>
+
+            <a class="text-link" href="#sermons">
+              Browse sermon library <span>→</span>
+            </a>
+          </div>
+
+          <article class="featured-sermon reveal">
+            <div class="sermon-image">
+              <img
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"
+                alt="Pastor speaking during a church service"
+              />
+
+              <div class="sermon-overlay"></div>
+
+              <button
+                class="play-button"
+                data-video="The God Who Meets Us"
+                type="button"
+              >
+                <span>▶</span>
+              </button>
+
+              <span class="sermon-duration">42:18</span>
+            </div>
+
+            <div class="featured-sermon-content">
+              <span class="tag">Sunday message · Faith for today</span>
+
+              <h3>
+                The God who<br />
+                <em>meets us.</em>
+              </h3>
+
+              <p>
+                A message about finding God in ordinary places, difficult
+                seasons, and unexpected moments.
+              </p>
+
+              <div class="speaker-row">
+                <div class="speaker-avatar">MB</div>
+
+                <div>
+                  <strong>Pastor, Maranatha Baptist Church</strong>
+                  <span>Sunday worship service</span>
+                </div>
+              </div>
+
+              <div class="sermon-buttons">
+                <button
+                  class="button button-red play-trigger"
+                  data-video="The God Who Meets Us"
+                  type="button"
+                >
+                  Watch message <span>▶</span>
+                </button>
+
+                <button class="audio-button" type="button">
+                  ♬ Listen to audio
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Beliefs -->
+      <section class="beliefs-section section" id="beliefs">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">What guides us</p>
+
+            <h2>
+              Rooted in truth.<br />
+              <em>Alive in love.</em>
+            </h2>
+          </div>
+
+          <div class="beliefs-grid">
+            <article class="belief-card reveal">
+              <span class="belief-number">01</span>
+              <div class="belief-symbol">✚</div>
+              <h3>Jesus is central</h3>
+              <p>
+                We believe salvation is found through grace and faith in Jesus
+                Christ.
+              </p>
+            </article>
+
+            <article class="belief-card reveal">
+              <span class="belief-number">02</span>
+              <div class="belief-symbol">⌁</div>
+              <h3>Scripture is our foundation</h3>
+              <p>
+                We trust God’s Word as our guide for faith, character, and daily
+                living.
+              </p>
+            </article>
+
+            <article class="belief-card reveal">
+              <span class="belief-number">03</span>
+              <div class="belief-symbol">◌</div>
+              <h3>People matter deeply</h3>
+              <p>
+                We are called to welcome, disciple, serve, and love our
+                neighbours well.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values -->
+      <section class="values-section section">
+        <div class="container values-layout">
+          <div class="values-intro reveal">
+            <p class="eyebrow">Our core values</p>
+
+            <h2>
+              The kind of people<br />
+              <em>we are becoming.</em>
+            </h2>
+
+            <p>
+              These values shape how we worship, lead, serve, work, welcome,
+              and represent Christ.
+            </p>
+
+            <div class="values-wheel">
+              <div class="wheel-cross">✚</div>
+              <div class="wheel-ring"></div>
+              <span class="wheel-label wheel-label-one">Godliness</span>
+              <span class="wheel-label wheel-label-two">Excellence</span>
+              <span class="wheel-label wheel-label-three">Faithfulness</span>
+              <span class="wheel-label wheel-label-four">Love</span>
+            </div>
+          </div>
+
+          <div class="values-list">
+            <article class="value-panel value-panel-red reveal">
+              <span class="value-panel-number">01</span>
+
+              <div>
+                <span class="value-panel-icon">✚</span>
+                <h3>Godliness</h3>
+                <p>
+                  We pursue a life that reflects the character, presence, and
+                  heart of God.
+                </p>
+              </div>
+
+              <span class="value-panel-arrow">↗</span>
+            </article>
+
+            <article class="value-panel value-panel-blue reveal">
+              <span class="value-panel-number">02</span>
+
+              <div>
+                <span class="value-panel-icon">✦</span>
+                <h3>Excellence</h3>
+                <p>
+                  We honour God by bringing our best attitude, effort,
+                  creativity, and stewardship.
+                </p>
+              </div>
+
+              <span class="value-panel-arrow">↗</span>
+            </article>
+
+            <article class="value-panel value-panel-gold reveal">
+              <span class="value-panel-number">03</span>
+
+              <div>
+                <span class="value-panel-icon">⌁</span>
+                <h3>Faithfulness</h3>
+                <p>
+                  We remain dependable, committed, and present through every
+                  season.
+                </p>
+              </div>
+
+              <span class="value-panel-arrow">↗</span>
+            </article>
+
+            <article class="value-panel value-panel-white reveal">
+              <span class="value-panel-number">04</span>
+
+              <div>
+                <span class="value-panel-icon">♡</span>
+                <h3>Love</h3>
+                <p>
+                  We make the love of Jesus visible through welcome,
+                  compassion, and service.
+                </p>
+              </div>
+
+              <span class="value-panel-arrow">↗</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ministries -->
+      <section class="ministries-section section" id="ministries">
+        <div class="container">
+          <div class="section-heading split-heading reveal">
+            <div>
+              <p class="eyebrow">There is room for you</p>
+
+              <h2>
+                Find your people.<br />
+                <em>Serve with purpose.</em>
+              </h2>
+            </div>
+
+            <a class="text-link" href="#contact">
+              Join a ministry <span>→</span>
+            </a>
+          </div>
+
+          <div class="ministry-grid">
+            <article class="ministry-card ministry-featured reveal">
+              <img
+                src="https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&w=1100&q=85"
+                alt="Young people smiling together"
+              />
+
+              <div class="ministry-shade"></div>
+
+              <div class="ministry-info">
+                <span class="ministry-icon">☀</span>
+                <h3>Youth & Young Adults</h3>
+                <p>
+                  Honest conversations, strong friendships, and a faith that
+                  follows Jesus into real life.
+                </p>
+                <a href="#contact">Get connected →</a>
+              </div>
+            </article>
+
+            <article class="ministry-card ministry-blue reveal">
+              <span class="ministry-large-icon">◌</span>
+
+              <div>
+                <span class="tag">For every family</span>
+                <h3>Children’s Church</h3>
+                <p>
+                  Helping children discover God’s love in a safe, joyful, and
+                  age-appropriate environment.
+                </p>
+                <a href="#visit">Learn more →</a>
+              </div>
+            </article>
+
+            <article class="ministry-card ministry-red reveal">
+              <span class="ministry-large-icon">♬</span>
+
+              <div>
+                <span class="tag">Worship & service</span>
+                <h3>Choir & Music</h3>
+                <p>
+                  Using our voices, instruments, and gifts to lead the church in
+                  worship.
+                </p>
+                <a href="#contact">Get involved →</a>
+              </div>
+            </article>
+
+            <article class="ministry-card ministry-white reveal">
+              <span class="ministry-large-icon">♡</span>
+
+              <div>
+                <span class="tag">Prayer & mission</span>
+                <h3>Evangelism & Outreach</h3>
+                <p>
+                  Taking the hope of Christ beyond the church walls and into our
+                  communities.
+                </p>
+                <a href="#contact">Serve with us →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events -->
+      <section class="events-section section" id="events">
+        <div class="container">
+          <div class="section-heading split-heading reveal">
+            <div>
+              <p class="eyebrow">Come together</p>
+
+              <h2>
+                What’s happening<br />
+                <em>at Maranatha.</em>
+              </h2>
+            </div>
+
+            <a class="text-link" href="#events">
+              View all events <span>→</span>
+            </a>
+          </div>
+
+          <div class="events-list">
+            <article class="event-card reveal">
+              <div class="event-date">
+                <strong>21</strong>
+                <span>SEP<br />2026</span>
+              </div>
+
+              <div class="event-card-content">
+                <span class="tag">Church-wide</span>
+                <h3>Family Thanksgiving Service</h3>
+                <p>
+                  A joyful Sunday of worship, testimonies, thanksgiving, and
+                  fellowship.
+                </p>
+                <small>Sunday · 9:30 AM · Main auditorium</small>
+              </div>
+
+              <a class="event-arrow" href="#visit">→</a>
+            </article>
+
+            <article class="event-card reveal">
+              <div class="event-date date-blue">
+                <strong>27</strong>
+                <span>SEP<br />2026</span>
+              </div>
+
+              <div class="event-card-content">
+                <span class="tag">Prayer</span>
+                <h3>Night of Encounter</h3>
+                <p>
+                  An evening of prayer, worship, and seeking God together.
+                </p>
+                <small>Friday · 6:00 PM · Main auditorium</small>
+              </div>
+
+              <a class="event-arrow" href="#visit">→</a>
+            </article>
+
+            <article class="event-card reveal">
+              <div class="event-date date-sand">
+                <strong>04</strong>
+                <span>OCT<br />2026</span>
+              </div>
+
+              <div class="event-card-content">
+                <span class="tag">Growth</span>
+                <h3>New Members’ Class</h3>
+                <p>
+                  Learn our story, discover our beliefs, and find your place.
+                </p>
+                <small>Sunday · 1:00 PM · Fellowship hall</small>
+              </div>
+
+              <a class="event-arrow" href="#visit">→</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visit -->
+      <section class="visit-section section" id="visit">
+        <div class="container visit-layout">
+          <div class="visit-copy reveal">
+            <p class="eyebrow eyebrow-light">Your first Sunday</p>
+
+            <h2>
+              We would love<br />
+              <em>to meet you.</em>
+            </h2>
+
+            <p>
+              Come as you are. Whether you come alone, with family, or with a
+              friend, our welcome team will be ready for you.
+            </p>
+
+            <div class="service-times">
+              <h3>Sunday services</h3>
+
+              <div class="service-time">
+                <span class="time-icon">◷</span>
+
+                <div>
+                  <strong>7:30 AM</strong>
+                  <small>Morning worship</small>
+                </div>
+              </div>
+
+              <div class="service-time">
+                <span class="time-icon time-icon-red">◷</span>
+
+                <div>
+                  <strong>9:30 AM</strong>
+                  <small>Family worship service</small>
+                </div>
+              </div>
+
+              <div class="service-time">
+                <span class="time-icon time-icon-gold">◷</span>
+
+                <div>
+                  <strong>11:30 AM</strong>
+                  <small>Contemporary worship</small>
+                </div>
+              </div>
+            </div>
+
+            <p class="address">
+              ⌖ Maranatha Baptist Church, Ogbomoso<br />
+              Oyo State, Nigeria
+            </p>
+          </div>
+
+          <form class="visit-form reveal" id="visitForm">
+            <div class="form-logo">
+              <img
+                src="IMG-20250905-WA0021.jpg"
+                alt="Maranatha Baptist Church logo"
+              />
+            </div>
+
+            <h3>Plan your visit</h3>
+
+            <p>
+              Tell us when you are coming and we will make sure you feel at
+              home.
+            </p>
+
+            <label>
+              Your name
+              <input
+                type="text"
+                name="name"
+                placeholder="Your full name"
+                required
+              />
+            </label>
+
+            <label>
+              Phone number
+              <input
+                type="tel"
+                name="phone"
+                placeholder="+234 800 000 0000"
+                required
+              />
+            </label>
+
+            <div class="form-row">
+              <label>
+                Visit date
+                <input type="date" name="date" required />
+              </label>
+
+              <label>
+                Guests
+                <select name="guests">
+                  <option>Just me</option>
+                  <option>2 people</option>
+                  <option>3 people</option>
+                  <option>4 people</option>
+                  <option>5+ people</option>
+                </select>
+              </label>
+            </div>
+
+            <button class="button button-red full-width" type="submit">
+              We’ll save you a seat <span>→</span>
+            </button>
+
+            <small class="form-note">
+              Your details are only used to prepare for your visit.
+            </small>
+          </form>
+        </div>
+      </section>
+
+      <!-- Envoy -->
+      <section class="envoy-section">
+        <div class="envoy-map-pattern"></div>
+        <div class="envoy-light"></div>
+
+        <div class="container envoy-layout reveal">
+          <div class="envoy-copy">
+            <span class="envoy-eyebrow">Beyond our walls</span>
+
+            <h2>
+              Raised here.<br />
+              <em>Sent everywhere.</em>
+            </h2>
+
+            <p>
+              From Ogbomoso to the nations, we believe every believer carries a
+              message, a gift, and a mission.
+            </p>
+
+            <a href="#mission" class="button button-red">
+              Discover your assignment <span>→</span>
+            </a>
+          </div>
+
+          <div class="envoy-globe">
+            <div class="globe-core">
+              <div class="globe-continents"></div>
+              <div class="globe-cross">✚</div>
+            </div>
+
+            <span class="globe-word word-one">OGBOMOSO</span>
+            <span class="globe-word word-two">NIGERIA</span>
+            <span class="globe-word word-three">AFRICA</span>
+            <span class="globe-word word-four">NATIONS</span>
+
+            <div class="globe-signal signal-one"></div>
+            <div class="globe-signal signal-two"></div>
+            <div class="globe-signal signal-three"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission -->
+      <section class="mission-launch-section" id="mission">
+        <div class="mission-stars"></div>
+
+        <div class="container mission-launch-layout reveal">
+          <div class="mission-launch-copy">
+            <span class="eyebrow eyebrow-light">
+              From Maranatha to the nations
+            </span>
+
+            <h2>
+              Grace has<br />
+              <em>a direction.</em>
+            </h2>
+
+            <p>
+              We are not only gathered. We are sent. Every life touched by
+              grace becomes part of God’s movement into the world.
+            </p>
+
+            <button
+              class="button button-red"
+              id="launchArrowButton"
+              type="button"
+            >
+              Launch the mission <span>↗</span>
+            </button>
+          </div>
+
+          <div class="mission-map" id="missionMap">
+            <div class="map-grid"></div>
+
+            <div class="mission-point point-maranatha">
+              <span class="point-pulse"></span>
+              <strong>MBC</strong>
+              <small>Ogbomoso</small>
+            </div>
+
+            <div class="mission-point point-lagos">
+              <span class="point-pulse"></span>
+              <strong>Lagos</strong>
+            </div>
+
+            <div class="mission-point point-london">
+              <span class="point-pulse"></span>
+              <strong>London</strong>
+            </div>
+
+            <div class="mission-point point-nairobi">
+              <span class="point-pulse"></span>
+              <strong>Nairobi</strong>
+            </div>
+
+            <div class="mission-point point-world">
+              <span class="point-pulse"></span>
+              <strong>The Nations</strong>
+            </div>
+
+            <svg
+              class="mission-arrow-svg"
+              viewBox="0 0 800 400"
+              aria-hidden="true"
+            >
+              <defs>
+                <filter id="arrowGlow">
+                  <feGaussianBlur
+                    stdDeviation="4"
+                    result="blur"
+                  />
+                  <feMerge>
+                    <feMergeNode in="blur"></feMergeNode>
+                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                  </feMerge>
+                </filter>
+
+                <marker
+                  id="arrowHead"
+                  markerWidth="14"
+                  markerHeight="14"
+                  refX="11"
+                  refY="7"
+                  orient="auto"
+                >
+                  <path
+                    d="M0,0 L14,7 L0,14 Z"
+                    fill="#f3c5c3"
+                  ></path>
+                </marker>
+              </defs>
+
+              <path
+                class="mission-arrow-glow"
+                d="M150 225 C230 40 340 345 445 178 S585 65 680 135"
+                marker-end="url(#arrowHead)"
+              ></path>
+
+              <path
+                class="mission-arrow-path"
+                d="M150 225 C230 40 340 345 445 178 S585 65 680 135"
+                marker-end="url(#arrowHead)"
+              ></path>
+            </svg>
+
+            <div class="mission-arrow" aria-hidden="true">
+              <span class="arrow-feather">✦</span>
+              <span class="arrow-shaft"></span>
+              <span class="arrow-tip"></span>
+            </div>
+
+            <span class="mission-caption">SHOT WITH PURPOSE</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Giving -->
+      <section class="giving-section section" id="giving">
+        <div class="container giving-layout">
+          <div class="giving-copy reveal">
+            <p class="eyebrow">Generosity is worship</p>
+
+            <h2>
+              Together, we can<br />
+              <em>make hope visible.</em>
+            </h2>
+
+            <p>
+              Your giving supports ministry, missions, discipleship, community
+              care, and the work God has entrusted to Maranatha.
+            </p>
+
+            <div class="pastor-note">
+              <div class="note-mark">“</div>
+
+              <div>
+                <p>
+                  Thank you for giving faithfully and helping us serve Ogbomoso
+                  with love.
+                </p>
+
+                <small>— The pastoral team</small>
+              </div>
+            </div>
+          </div>
+
+          <form class="giving-card reveal" id="givingForm">
+            <div class="giving-card-heading">
+              <h3>Give online</h3>
+              <span>⌁ Secure</span>
+            </div>
+
+            <div class="giving-tabs">
+              <button
+                class="giving-tab active"
+                type="button"
+                data-category="Tithe"
+              >
+                Tithe
+              </button>
+
+              <button
+                class="giving-tab"
+                type="button"
+                data-category="Offering"
+              >
+                Offering
+              </button>
+
+              <button
+                class="giving-tab"
+                type="button"
+                data-category="Missions"
+              >
+                Missions
+              </button>
+
+              <button
+                class="giving-tab"
+                type="button"
+                data-category="Building"
+              >
+                Building
+              </button>
+            </div>
+
+            <input type="hidden" name="category" value="Tithe" />
+
+            <label>
+              Amount
+
+              <div class="amount-input">
+                <span>₦</span>
+
+                <input
+                  type="number"
+                  name="amount"
+                  min="100"
+                  placeholder="0.00"
+                  required
+                />
+              </div>
+            </label>
+
+            <div class="quick-amounts">
+              <button type="button" data-amount="5000">₦5,000</button>
+              <button type="button" data-amount="10000">₦10,000</button>
+              <button type="button" data-amount="25000">₦25,000</button>
+              <button type="button" data-amount="50000">₦50,000</button>
+            </div>
+
+            <button class="button button-navy full-width" type="submit">
+              Continue to payment <span>→</span>
+            </button>
+
+            <small class="payment-note">
+              Connect this interface to Paystack or Flutterwave in production.
+            </small>
+          </form>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section class="gallery-section section">
+        <div class="container">
+          <div class="section-heading split-heading reveal">
+            <div>
+              <p class="eyebrow">Life at Maranatha</p>
+
+              <h2>
+                Worship. Fellowship.<br />
+                <em>Real people.</em>
+              </h2>
+            </div>
+
+            <div class="gallery-filters">
+              <button
+                class="gallery-filter active"
+                data-filter="all"
+                type="button"
+              >
+                All
+              </button>
+
+              <button
+                class="gallery-filter"
+                data-filter="worship"
+                type="button"
+              >
+                Worship
+              </button>
+
+              <button
+                class="gallery-filter"
+                data-filter="community"
+                type="button"
+              >
+                Community
+              </button>
+
+              <button
+                class="gallery-filter"
+                data-filter="youth"
+                type="button"
+              >
+                Youth
+              </button>
+            </div>
+          </div>
+
+          <div class="gallery-grid">
+            <figure class="gallery-wide reveal" data-category="worship">
+              <img
+                src="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1000&q=85"
+                alt="Worship gathering"
+              />
+              <figcaption>Sunday worship</figcaption>
+            </figure>
+
+            <figure class="gallery-tall reveal" data-category="community">
+              <img
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=85"
+                alt="Church community gathering"
+              />
+              <figcaption>Life together</figcaption>
+            </figure>
+
+            <figure class="reveal" data-category="youth">
+              <img
+                src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=85"
+                alt="Young people together"
+              />
+              <figcaption>Youth fellowship</figcaption>
+            </figure>
+
+            <figure class="reveal" data-category="community">
+              <img
+                src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=800&q=85"
+                alt="Volunteers serving"
+              />
+              <figcaption>Serving our community</figcaption>
+            </figure>
+
+            <figure class="gallery-wide reveal" data-category="worship">
+              <img
+                src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1000&q=85"
+                alt="Live worship music"
+              />
+              <figcaption>Worship night</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact-section section" id="contact">
+        <div class="container contact-layout">
+          <div class="contact-copy reveal">
+            <p class="eyebrow">We are here for you</p>
+
+            <h2>
+              Let’s begin<br />
+              <em>a conversation.</em>
+            </h2>
+
+            <p>
+              Questions, prayer requests, or simply want to say hello? Our
+              church team would be glad to hear from you.
+            </p>
+
+            <div class="contact-actions">
+              <a href="tel:+2348000000000">
+                <span>☎</span>
+
+                <div>
+                  <small>Call the church</small>
+                  <strong>+234 800 000 0000</strong>
+                </div>
+              </a>
+
+              <a href="https://wa.me/2348000000000">
+                <span>◉</span>
+
+                <div>
+                  <small>WhatsApp us</small>
+                  <strong>Start a conversation</strong>
+                </div>
+              </a>
+
+              <a href="mailto:hello@maranathabaptist.org">
+                <span>✉</span>
+
+                <div>
+                  <small>Email us</small>
+                  <strong>hello@maranathabaptist.org</strong>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-card reveal">
+            <div class="form-tabs">
+              <button
+                class="form-tab active"
+                data-form="messageForm"
+                type="button"
+              >
+                Send a message
+              </button>
+
+              <button
+                class="form-tab"
+                data-form="prayerForm"
+                type="button"
+              >
+                Request prayer
+              </button>
+            </div>
+
+            <form id="messageForm" class="contact-form active">
+              <label>
+                Name
+                <input type="text" placeholder="Your name" required />
+              </label>
+
+              <label>
+                Email
+                <input
+                  type="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </label>
+
+              <label>
+                Message
+
+                <textarea
+                  rows="4"
+                  placeholder="How can we help?"
+                  required
+                ></textarea>
+              </label>
+
+              <button class="button button-navy" type="submit">
+                Send message <span>→</span>
+              </button>
+            </form>
+
+            <form id="prayerForm" class="contact-form">
+              <label>
+                Name
+                <input type="text" placeholder="Your name" required />
+              </label>
+
+              <label>
+                How can we pray with you?
+
+                <textarea
+                  rows="5"
+                  placeholder="Share only what you feel comfortable sharing..."
+                  required
+                ></textarea>
+              </label>
+
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                Please keep my request anonymous.
+              </label>
+
+              <button class="button button-red" type="submit">
+                Send prayer request <span>→</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a class="floating-prayer" href="#contact" aria-label="Request prayer">
+      <span>♡</span>
+      <small>Prayer</small>
+    </a>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand brand-footer" href="#home">
+            <img
+              src="IMG-20250905-WA0021.jpg"
+              alt="Maranatha Baptist Church logo"
+            />
+
+            <span class="brand-copy">
+              <strong>Maranatha</strong>
+              <small>Baptist Church, Ogbomoso</small>
+            </span>
+          </a>
+
+          <p>
+            Oasis of Grace. Raising and building people as God’s envoys to the
+            nations.
+          </p>
+
+          <div class="socials">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="YouTube">▶</a>
+            <a
+              href="https://wa.me/2348000000000"
+              aria-label="WhatsApp"
+            >
+              ◉
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Church</h4>
+          <a href="#about">About us</a>
+          <a href="#beliefs">What we believe</a>
+          <a href="#sermons">Sermons</a>
+          <a href="#ministries">Ministries</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Connect</h4>
+          <a href="#visit">Plan a visit</a>
+          <a href="#giving">Give online</a>
+          <a href="#salvation">Follow Jesus</a>
+          <a href="#contact">Prayer request</a>
+        </div>
+
+        <div class="footer-column footer-service">
+          <h4>Join us</h4>
+          <strong>Sunday services</strong>
+          <p>7:30 AM · 9:30 AM · 11:30 AM</p>
+          <p>Ogbomoso, Oyo State, Nigeria</p>
+          <a href="#visit">Get directions →</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© 2026 Maranatha Baptist Church, Ogbomoso.</span>
+        <span>Godliness · Excellence · Faithfulness · Love</span>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal" id="videoModal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close video">×</button>
+
+      <div class="video-placeholder">
+        <span>▶</span>
+        <h3 id="videoTitle">Sermon video</h3>
+        <p>Connect your YouTube or Vimeo video here.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"
+    }
+  }
+  </script>
+
+  <script type="module" src="oasis-experience.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
