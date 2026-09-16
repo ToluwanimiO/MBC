@@ -4823,11 +4823,10 @@ body {
 }
 
 .immersive-experience.experience-complete {
-  height: 0;
-  min-height: 0;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-30px);
+  height: 0 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
 }
 
 .experience-scroll-space {
@@ -5766,4 +5765,218 @@ body.experience-finished .experience-scroll-space {
   .progress-track span {
     transition: none;
   }
+}
+/* Keep the immersive scene above the page while it is active */
+.immersive-experience {
+  isolation: isolate;
+  position: relative;
+  z-index: 100;
+}
+
+/* The fixed visual layers */
+#oasisExperience,
+.experience-vignette,
+.experience-grain {
+  position: fixed;
+  inset: 0;
+}
+
+/* Canvas stays at the back */
+#oasisExperience {
+  z-index: 1;
+}
+
+/* Dark cinematic overlay */
+.experience-vignette {
+  z-index: 2;
+}
+
+/* Grain should not cover controls */
+.experience-grain {
+  z-index: 3;
+}
+
+/* Loader must be above every immersive layer */
+.experience-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+/* Brand, copy, progress, skip button */
+.experience-ui {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+/* The normal page must initially be behind the experience */
+.website-shell {
+  position: relative;
+  z-index: 1;
+}
+
+/* Reveal the normal page only after skip/end of experience */
+.immersive-experience.experience-complete {
+  height: 100vh;
+  min-height: 100vh;
+  pointer-events: none;
+}
+
+.immersive-experience.experience-complete #oasisExperience,
+.immersive-experience.experience-complete .experience-vignette,
+.immersive-experience.experience-complete .experience-grain,
+.immersive-experience.experience-complete .experience-ui {
+ opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* Ensure the progress container is visibly positioned */
+.experience-progress {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  z-index: 1002;
+}
+
+.progress-track {
+  background: rgba(255, 255, 255, 0.38);
+  display: block;
+  height: 2px;
+  overflow: hidden;
+}
+
+.progress-track span {
+  background: #9ef0e4;
+  display: block;
+  height: 100%;
+  min-width: 2px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  width: 100%;
+}
+/* Root-level loader: must be outside .immersive-experience */
+body > .experience-loader {
+  align-items: center;
+  background:
+    radial-gradient(
+      circle at 50% 42%,
+      #176471 0%,
+      #0b4654 42%,
+      #062d38 100%
+    ) !important;
+  display: flex !important;
+  height: 100dvh;
+  inset: 0;
+  justify-content: center;
+  opacity: 1 !important;
+  overflow: hidden;
+  pointer-events: auto;
+  position: fixed !important;
+  visibility: visible !important;
+  width: 100%;
+  z-index: 2147483647 !important;
+}
+body > .experience-loader::before {
+  border: 1px solid rgba(174, 244, 231, 0.22);
+  border-radius: 50%;
+  content: "";
+  height: min(58vw, 450px);
+  position: absolute;
+  width: min(58vw, 450px);
+}
+
+body > .experience-loader.hide {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.8s ease;
+  visibility: hidden !important;
+}
+
+body > .experience-loader .experience-loader-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+body > .experience-loader img {
+  display: block;
+  height: 90px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  width: 90px;
+}
+
+body > .experience-loader .loader-brand {
+  color: #ffffff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  letter-spacing: 0.22em;
+}
+
+body > .experience-loader .loader-rule {
+  animation: loaderRule 1.8s ease-in-out infinite;
+  background: #9ef0e4;
+  display: block;
+  height: 1px;
+  margin: 20px auto;
+  width: 125px;
+}
+
+body > .experience-loader small {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+body > .experience-loader p {
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 0.75rem;
+  margin-top: 20px;
+}
+
+body > .experience-loader .loader-skip {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  color: #ffffff;
+  display: none;
+  font-size: 0.68rem;
+  font-weight: 700;
+  margin-top: 16px;
+  padding: 12px 18px;
+}
+
+body > .experience-loader.failed .loader-skip {
+  display: inline-flex;
+}
+
+@keyframes loaderRule {
+  0% {
+    opacity: 0.35;
+    transform: scaleX(0.35);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  100% {
+    opacity: 0.35;
+    transform: scaleX(0.35);
+  }
+}
+html.immersive-loading,
+body.immersive-loading {
+  scroll-behavior: auto !important;
+}
+
+body.immersive-loading {
+  overflow-x: hidden;
 }

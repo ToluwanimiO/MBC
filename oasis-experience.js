@@ -48,6 +48,20 @@ const copySent = document.querySelector(
   ".copy-sent"
 );
 
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.scrollTo(0, 0);
+
+document.documentElement.classList.add(
+  "immersive-loading"
+);
+
+document.body.classList.add(
+  "immersive-loading"
+);
+
 let experienceExited = false;
 let loaderClosed = false;
 let targetProgress = 0;
@@ -94,8 +108,14 @@ function failLoader(message) {
   window.setTimeout(closeLoader, 1200);
 }
 
-loaderSkip?.addEventListener("click", closeLoader);
+loaderSkip?.addEventListener("click", () => {
+  closeLoader();
 
+  if (!experienceExited) {
+    experienceExited = true;
+    leaveImmersiveExperience();
+  }
+});
 window.setTimeout(() => {
   if (!loaderClosed) {
     failLoader("The experience is taking longer than expected");
@@ -142,7 +162,6 @@ function getExperienceProgress() {
 function updateScrollProgress() {
   targetProgress = getExperienceProgress();
 }
-
 function updateExperienceCopy(progress) {
   const copies = [
     copyDesert,
@@ -164,13 +183,14 @@ function updateExperienceCopy(progress) {
   });
 
   if (progressNumber) {
-    progressNumber.textContent =
-      String(activeIndex + 1).padStart(2, "0");
+    progressNumber.textContent = String(
+      activeIndex + 1
+    ).padStart(2, "0");
   }
 
   if (progressBar) {
     progressBar.style.transform =
-      `scaleX(${progress})`;
+      `scaleX(${Math.max(progress, 0.015)})`;
   }
 }
 
@@ -231,9 +251,51 @@ function updateCamera(progress) {
   oasisLight.intensity =
     7 + Math.sin(p * Math.PI) * 4;
 }
+function resetImmersiveExperience() {
+  if (!experience) return;
 
+  experience.style.display = "";
+  experience.style.height = "";
+  experience.style.minHeight = "";
+
+  experience.classList.remove(
+    "experience-complete"
+  );
+
+  document.body.classList.remove(
+    "experience-finished"
+  );
+
+  targetProgress = 0;
+  currentProgress = 0;
+
+  if (progressNumber) {
+    progressNumber.textContent = "01";
+  }
+
+  if (progressBar) {
+    progressBar.style.transform =
+      "scaleX(0)";
+  }
+
+  [
+    copyDesert,
+    copyWater,
+    copyOasis,
+    copySent,
+  ].forEach((copy, index) => {
+    copy?.classList.toggle(
+      "active",
+      index === 0
+    );
+  });
+
+  experienceExited = false;
+}
+
+resetImmersiveExperience();
 function exitExperienceAutomatically() {
-  if (experienceExited) return;
+  if (experienceExited || !experience) return;
 
   const progress = getExperienceProgress();
 
@@ -241,11 +303,13 @@ function exitExperienceAutomatically() {
 
   experienceExited = true;
 
-  /*
-    Do not remove the immersive section immediately.
-    First let the browser reach its natural bottom.
-    Then hide only the visual layer and reveal the website.
-  */
+  leaveImmersiveExperience();
+}
+function leaveImmersiveExperience() {
+  if (!experience) return;
+
+  const homeSection =
+    document.querySelector("#home");
 
   experience.classList.add(
     "experience-complete"
@@ -255,13 +319,30 @@ function exitExperienceAutomatically() {
     "experience-finished"
   );
 
+  /*
+    Wait for the immersive section to collapse.
+    This prevents the old 520vh section from
+    preserving the previous scroll position.
+  */
   window.setTimeout(() => {
-    document
-      .querySelector("#home")
-      ?.scrollIntoView({
+    experience.style.display = "none";
+
+    if (!homeSection) return;
+
+    window.scrollTo({
+      top: homeSection.offsetTop,
+      left: 0,
+      behavior: "instant",
+    });
+
+    window.setTimeout(() => {
+      window.scrollTo({
+        top: homeSection.offsetTop,
+        left: 0,
         behavior: "smooth",
       });
-  }, 450);
+    }, 40);
+  }, 700);
 }
 
 function createScene() {
@@ -737,7 +818,12 @@ try {
   }
 
   createScene();
+  /* Keep loader visible until Three.js has rendered at least once */
+renderer.render(scene, camera);
 
+window.setTimeout(() => {
+  closeLoader();
+}, 900);
   window.addEventListener(
     "scroll",
     updateScrollProgress,
@@ -775,13 +861,6 @@ try {
 
   updateScrollProgress();
   animate();
-
-  window.addEventListener("load", () => {
-    window.setTimeout(
-      closeLoader,
-      1100
-    );
-  });
 } catch (error) {
   console.error(
     "Maranatha immersive experience error:",
@@ -812,15 +891,9 @@ window.addEventListener(
   watchExperienceEnd,
   { passive: true }
 );
-
 skipExperience?.addEventListener("click", () => {
-  experience.classList.add("experience-complete");
+  if (experienceExited) return;
 
-  window.setTimeout(() => {
-    document
-      .querySelector("#home")
-      ?.scrollIntoView({
-        behavior: "smooth",
-      });
-  }, 350);
+  experienceExited = true;
+  leaveImmersiveExperience();
 });
