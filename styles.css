@@ -5980,3 +5980,16 @@ body.immersive-loading {
 body.immersive-loading {
   overflow-x: hidden;
 }
+
+.bank-detail{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.bank-detail > span {
+  font-size: 0.8rem;
+  color: #000;
+}
